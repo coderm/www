@@ -1,0 +1,3 @@
+<div style="position:relative;float:left; height: 75px; width: 101px; vertical-align: middle;text-align: center;background-color: #f1f1f1;margin:0 0 5px 5px;overflow: hidden;" class="rounded5" >
+        <img src="/upload/advert_<?php echo $advertId.'/thumb_'.$imageName;?>" alt="<?php echo $imageName;?>" class='<?php echo $class;?>' imageName="<?php echo $imageName;?>" style="height:75px;vertical-align: middle;"/>
+</div>
