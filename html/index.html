@@ -9,31 +9,39 @@
         <meta property="og:type" content="article">
         <meta property="og:image" content="">
         <meta property="og:url" content="">
-        <meta property="og:site_name" content="Tatilevim">
-        <link type="text/css" rel="stylesheet" href="style.css" />
+        <meta property="og:site_name" content="Tatil Evim">
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 
     </head>
     <body>
 
-    <div id="top-area">
+    <div id="toparea">
         <div class="header">
-            <a href="/"><img  src="" width="" height="" alt="Tatil Evim" /></a>
-            <p class=""></p>
-            <div class="ilanno-ara"></div>
-            <a href="/ucretsiz-ilan-ver"><img  src="" width="" height="" alt="Ücretsiz İlan Ver" /></a>
-
+            <a href="/" class="site-logo"><img  src="/img/tatilevim-logo.jpg" width="264" height="54" alt="Tatil Evim" /></a>
+            <a href="/login" class="loginlink">Kullanıcı Girişi</a>
+            <div class="ilanno-ara">
+                <form method="post" action="">
+                    <input type="text" name="search-words" value="İlan No İle Arama" />
+                    <input type="submit" name="submit" class="buton"/>
+                    <div class="clear"></div>
+                </form>
+            </div>
+            <a class="ucretsiz-ilan-ver" href="/ucretsiz-ilan-ver" ><img  src="/img/ucretsiz-ilan-ver.jpg" width="188" height="39" alt="Ücretsiz İlan Ver" /></a>
 
         </div>
 
         <div class="top-bar">
             <div class="search-bar">
-                <div class="nereye"></div>
-                <div class="tarih1"></div>
-                <div class="tarih2"></div>
-                <div class="kisi-sayisi"></div>
-                <div class="ara"></div>
+                <form method="post" action="">
+                    <div class="nereye radius"><input type="text" value="Nereye gitmek istiyorsunuz?" name="nereye" class="input-nereye"/><span class="sprite nereyeimg"></span></div>
+                    <div class="tarih1 radius"><input type="text" value="Başlangıç tarihi" name="nereye" class="input-tarih1"/><span class="sprite tarih1img"></span></div>
+                    <div class="tarih2 radius"><input type="text" value="Bitiş tarihi" name="nereye" class="input-tarih2"/><span class="sprite tarih2img"></span></div>
+                    <div class="kisi-sayisi radius"><input type="text" value="Kişi sayısı" name="nereye" class="input-kisi-sayisi"/><span class="sprite kisi-sayisisiimg"></span></div>
+                    <div class="ara"><input type="submit" class="sprite buton"/></div>
+                    <div class="clear"></div>
+                </form>
             </div>
 
         </div>
@@ -44,9 +52,9 @@
     <div id="container">
         <div class="main">
 
-<!-- orta alan burdan başlıyor-->            
-            
-			
+            <!-- orta alan burdan başlıyor-->            
+
+
 
             <div id="main-slider fleft"></div>
             <div class="fleft">
@@ -109,7 +117,7 @@
                 <div class="baslik">
                     <h1>Öne Çıkanlar</h1>
                 </div>
-                
+
                 <ul class="advert-box">
                     <li>
                         <a href="">
@@ -124,7 +132,7 @@
                             </div>
                         </a>
                     </li>
-                    
+
                     <li>
                         <div class="nereden-ev-kiralamak">
                             <img src="" alt="" width="" height="" /> 
@@ -136,7 +144,7 @@
                                 <li>İstanbul</li>
                             </ul>
                         </div>
-                        
+
                     </li>     
                 </ul>
             </div>
@@ -147,7 +155,7 @@
                 <ul class="advert-box">
                     <li>
                         <a href="">
-                            
+
                         </a>
                     </li>
                 </ul>
@@ -159,40 +167,40 @@
                 <ul class="advert-box">
                     <li>
                         <a href="">
-                            
+
                         </a>
                     </li>
                 </ul>
             </div>            
 
-            
+
             <div class="serit">
                 <img src=""  width="" height="" />
             </div>
 
             <div class="main-bottom-info">
                 <img src=""  width="" height="" alt="where to stay in safranbolu" class="fleft"/>
-                
+
                 <div class="epostaliste-mailbirak fleft">
                     <img src=""  width="" height="" alt="Eposta Listemize mailinizi bırakın"/>
                     <div>
                         <input type="text" class="mail-input">
-                        <a href="javascript:;" class="ekle-buton"></a>
+                            <a href="javascript:;" class="ekle-buton"></a>
                     </div>
                 </div>
                 <div class="clear"></div>
             </div>
-            
-            
-			
-			
-			
-			
-			
-			
-			
-            
-          <!-- orta alan burda bitiyor-->  
+
+
+
+
+
+
+
+
+
+
+            <!-- orta alan burda bitiyor-->  
         </div>
     </div>
 
@@ -200,72 +208,72 @@
     <div id="bottom-area">
         <div class="bottom-bar">
             <div class="bottom-line">
-                    <div class="fleft">
-                        <input type="text" class="mail-input2">
+                <div class="fleft">
+                    <input type="text" class="mail-input2">
                         <a href="javascript:;" class="ekle-buton2"></a>
-                    </div>
-                    <div class="bottom-social fright">
+                </div>
+                <div class="bottom-social fright">
+                    <ul>
+                        <li><a href="" target="_blank" title="facebook" class="facebook-buton"></a></li>
+                        <li><a href="" target="_blank" title="twitter" class="twitter-buton"></a></li>
+                        <li><a href="" target="_blank" title="google" class="google-buton"></a></li>
+                        <li><a href="" target="_blank" title="beğen buton"></a></li>
+                        <li><a href="" target="_blank" title="tweet buton"></a></li>
                         <ul>
-                            <li><a href="" target="_blank" title="facebook" class="facebook-buton"></a></li>
-                            <li><a href="" target="_blank" title="twitter" class="twitter-buton"></a></li>
-                            <li><a href="" target="_blank" title="google" class="google-buton"></a></li>
-                            <li><a href="" target="_blank" title="beğen buton"></a></li>
-                            <li><a href="" target="_blank" title="tweet buton"></a></li>
-                        <ul>
 
-                    </div>
-                    <div class="clear"></div>
-            </div>
-			
-			
-			
-			<div class="footer-bottom">
-			
-				<div class="cosum-ortak">
-					<h1 class="">ÇÖZÜM ORTAKLARIMIZ<h1>
-					<div class="logos"></div>
-				</div>
-			
-				<div class="kurumsal">
-					<h1 class="">KURUMSAL<h1>
-					<ul>
-						<li><a href="">Hakkımızda</a></li>
-						<li><a href="">İletişim</a></li>
-						<li><a href="">Güvenli Rezervasyon Sistemi</a></li>
-						<li><a href="">Kampanyalar</a></li>
-					</ul>
-				</div>
+                            </div>
+                            <div class="clear"></div>
+                            </div>
 
-				<div class="kurumsal">
-					<h1 class="">GİZLİLİK ve KULLANIM<h1>
-					<ul>
-						<li><a href="">Rezervasyon ve İptal</a></li>
-						<li><a href="">Üyelik Sözleşmesi</a></li>
-						<li><a href="">Sıkça Sorulan Sorular</a></li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-			
-			</div>
-			
-			
-			
-        </div>        
-		
-		
-		<div class="copyright">
-		
-			<div class="copyright-text">Copyright 2013 www.tatilevim.com</div>
-			<img src="payu" width="" height="">
-			<img src="visa" width="" height="">
-			<img src="master" width="" height="">
-		</div>
 
-		
-		
-    </div>
-    
-    
 
-</body>
-</html>
+                            <div class="footer-bottom">
+
+                                <div class="cosum-ortak">
+                                    <h1 class="">ÇÖZÜM ORTAKLARIMIZ<h1>
+                                            <div class="logos"></div>
+                                            </div>
+
+                                            <div class="kurumsal">
+                                                <h1 class="">KURUMSAL<h1>
+                                                        <ul>
+                                                            <li><a href="">Hakkımızda</a></li>
+                                                            <li><a href="">İletişim</a></li>
+                                                            <li><a href="">Güvenli Rezervasyon Sistemi</a></li>
+                                                            <li><a href="">Kampanyalar</a></li>
+                                                        </ul>
+                                                        </div>
+
+                                                        <div class="kurumsal">
+                                                            <h1 class="">GİZLİLİK ve KULLANIM<h1>
+                                                                    <ul>
+                                                                        <li><a href="">Rezervasyon ve İptal</a></li>
+                                                                        <li><a href="">Üyelik Sözleşmesi</a></li>
+                                                                        <li><a href="">Sıkça Sorulan Sorular</a></li>
+                                                                    </ul>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+
+                                                                    </div>
+
+
+
+                                                                    </div>        
+
+
+                                                                    <div class="copyright">
+
+                                                                        <div class="copyright-text">Copyright 2013 www.tatilevim.com</div>
+                                                                        <img src="payu" width="" height="">
+                                                                            <img src="visa" width="" height="">
+                                                                                <img src="master" width="" height="">
+                                                                                    </div>
+
+
+
+                                                                                    </div>
+
+
+
+                                                                                    </body>
+                                                                                    </html>

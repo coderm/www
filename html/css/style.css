@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family:Arial, Helvetica, Tahoma; font-size:12px;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear{clear:both;}
+
+.sprite{ background:url(/img/sprite.png) no-repeat;}
+.radius{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(/css/ie-css3.htc);
+}
+
+#toparea{
+    width:100%;padding-top:20px;
+}
+
+
+
+
+#toparea .header { width: 950px; margin:0px auto; position:relative;padding-bottom:30px;}
+
+#toparea .header .loginlink {font-size:14px; font-weight:bold;color:#166a9a; text-decoration:underline; position:absolute; top:20px; left:410px;}
+#toparea .header .ilanno-ara{position:absolute; top:8px; left:535px; width:205px; height:41px; background:url(/img/search-box.jpg) no-repeat;}
+.header .ilanno-ara input[type="text"]{ width:120px; height:27px; float:left; margin-top:5px; margin-left:10px; border:none;}
+#toparea .header .ilanno-ara .buton { background: none repeat scroll 0 0 transparent;   border: none;   height: 41px;   margin-left: 29px;  text-indent: -9999px;   width: 45px; cursor:pointer;}
+#toparea .header .ucretsiz-ilan-ver { position:absolute; top:8px; left:762px;}
+
+#toparea .top-bar{background:#166a9a;width:100%; height:65px;}
+#toparea .top-bar .search-bar { width: 950px; margin:0px auto; padding-top:10px;}
+
+
+#toparea .top-bar .search-bar .nereye{ background-color:#f4f4f4; width:362px; height:40px; float:left;}
+#toparea .top-bar .search-bar .nereye .nereyeimg{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
+#toparea .top-bar .search-bar .nereye .input-nereye {height: 35px; border: none; background: none; width: 290px; margin-left: 15px; font-size: 14px; color: #166a9a;}
+
+#toparea .top-bar .search-bar .tarih1{ background-color:#f4f4f4; width:130px; height:40px;float:left; margin-left:20px; display:block;}
+#toparea .top-bar .search-bar .nereye .tarih1img{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
+#toparea .top-bar .search-bar .tarih1 .input-tarih1{height: 35px; border: none; background: none; width: 80px; margin-left: 10px; font-size: 14px; color: #166a9a;}
+
+#toparea .top-bar .search-bar .tarih2{ background-color:#f4f4f4; width:130px; height:40px; float:left; margin-left:20px;}
+#toparea .top-bar .search-bar .nereye .tarih2img{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
+#toparea .top-bar .search-bar .tarih2 .input-tarih2{height: 35px; border: none; background: none; width: 80px; margin-left: 10px; font-size: 14px; color: #166a9a;}
+
+#toparea .top-bar .search-bar .kisi-sayisi{ background-color:#f4f4f4; width:130px; height:40px; float:left; margin-left:20px;}
+#toparea .top-bar .search-bar .kisi-sayisi .kisi-sayisi-img{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
+#toparea .top-bar .search-bar .kisi-sayisi .input-kisi-sayisi {height: 35px; border: none; background: none; width: 130px; margin-left: 15px; font-size: 14px; color: #166a9a;}
+
+
+
+#toparea .top-bar .search-bar .ara .buton{height: 40px; width:118px; border: none; margin-left: 20px; text-indent: -999px; background-position: -29px 0; }
+
+
+
+
+
+
+li {color: #999;}
+li span {color: #000;}
+
+
+
+
+ul li {
+    color:#444; /* set color of list item to a dark gray */
+    list-style:none; /* if you’re not already using a reset */
+}
+
+ul li:before {
+    color:#ed0000; /* set color to red */
+    content:"\2022"; /* /2022 is the numerical unicode for &bull; */
+    font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+    padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
+    position:relative;
+    top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+}
