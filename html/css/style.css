@@ -43,9 +43,20 @@ table {
     border-spacing: 0;
 }
 
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+
+.fleft {float:left;}
+.fright {float:right;}
 .clear{clear:both;}
 
 .sprite{ background:url(/img/sprite.png) no-repeat;}
+.spritefiyat{ background:url(/img/fiyat-sprite.png) no-repeat;}
 .radius{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -53,6 +64,11 @@ table {
     border-radius: 5px;
     behavior: url(/css/ie-css3.htc);
 }
+.relative{position:relative;}
+.absolute{position:absolute;}
+
+
+
 
 #toparea{
     width:100%;padding-top:20px;
@@ -73,23 +89,21 @@ table {
 #toparea .top-bar .search-bar { width: 950px; margin:0px auto; padding-top:10px;}
 
 
-#toparea .top-bar .search-bar .nereye{ background-color:#f4f4f4; width:362px; height:40px; float:left;}
+#toparea .top-bar .search-bar .nereye{ background-color:#f4f4f4; width:322px; height:40px; float:left;}
 #toparea .top-bar .search-bar .nereye .nereyeimg{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
-#toparea .top-bar .search-bar .nereye .input-nereye {height: 35px; border: none; background: none; width: 290px; margin-left: 15px; font-size: 14px; color: #166a9a;}
+#toparea .top-bar .search-bar .nereye .input-nereye {height: 35px; border: none; background: none; width: 270px; margin-left: 15px; font-size: 14px; color: #166a9a;}
 
-#toparea .top-bar .search-bar .tarih1{ background-color:#f4f4f4; width:130px; height:40px;float:left; margin-left:20px; display:block;}
-#toparea .top-bar .search-bar .nereye .tarih1img{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
-#toparea .top-bar .search-bar .tarih1 .input-tarih1{height: 35px; border: none; background: none; width: 80px; margin-left: 10px; font-size: 14px; color: #166a9a;}
+#toparea .top-bar .search-bar .tarih1{ background-color:#f4f4f4; width:150px; height:40px;float:left; margin-left:20px; display:block;}
+#toparea .top-bar .search-bar .tarih1img{float:right; margin-right:10px; margin-top:7px; width:25px; height:27px; background-position:0px -28px; }
+#toparea .top-bar .search-bar .tarih1 .input-tarih1{height: 35px; border: none; background: none; width: 100px; margin-left: 10px; font-size: 14px; color: #166a9a;}
 
-#toparea .top-bar .search-bar .tarih2{ background-color:#f4f4f4; width:130px; height:40px; float:left; margin-left:20px;}
-#toparea .top-bar .search-bar .nereye .tarih2img{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
-#toparea .top-bar .search-bar .tarih2 .input-tarih2{height: 35px; border: none; background: none; width: 80px; margin-left: 10px; font-size: 14px; color: #166a9a;}
+#toparea .top-bar .search-bar .tarih2{ background-color:#f4f4f4; width:150px; height:40px; float:left; margin-left:20px;}
+#toparea .top-bar .search-bar .tarih2img{float:right; margin-right:10px; margin-top:7px; width:25px; height:27px; background-position:0 -57px; }
+#toparea .top-bar .search-bar .tarih2 .input-tarih2{height: 35px; border: none; background: none; width: 100px; margin-left: 10px; font-size: 14px; color: #166a9a;}
 
 #toparea .top-bar .search-bar .kisi-sayisi{ background-color:#f4f4f4; width:130px; height:40px; float:left; margin-left:20px;}
-#toparea .top-bar .search-bar .kisi-sayisi .kisi-sayisi-img{float:right; margin-right:10px; margin-top:7px; width:25px; height:25px;background-position:0 0; }
-#toparea .top-bar .search-bar .kisi-sayisi .input-kisi-sayisi {height: 35px; border: none; background: none; width: 130px; margin-left: 15px; font-size: 14px; color: #166a9a;}
-
-
+#toparea .top-bar .search-bar .kisi-sayisisiimg{float:right; margin-right:10px; margin-top:7px; width:25px; height:27px; background-position:0 -86px; }
+#toparea .top-bar .search-bar .kisi-sayisi .input-kisi-sayisi {height: 35px; border: none; background: none; width: 70px; margin-left: 15px; font-size: 14px; color: #166a9a;}
 
 #toparea .top-bar .search-bar .ara .buton{height: 40px; width:118px; border: none; margin-left: 20px; text-indent: -999px; background-position: -29px 0; }
 
@@ -97,23 +111,100 @@ table {
 
 
 
+#container .main{ width: 950px; margin:0px auto; position:relative; margin-top:15px;}
 
-li {color: #999;}
-li span {color: #000;}
+.main .main-slider { width:700px; margin-right:18px;}
 
+.populer-sehirler {margin-top:20px;width :230px; background:#f7f6f6; border:1px solid #e3e3e3;padding-bottom:15px;}
+.populer-sehirler .baslik{ font-size:16px; color: #2573a1; padding:10px 0px; border-bottom:1px solid #e3e3e3; text-align:center;}
+.populer-sehirler li{ float:left; padding:4px 0px 0px 20px; width:90px;  font-size:12px;}
+.populer-sehirler ul{overflow: hidden;}
+.populer-sehirler li a{ color:#2573a1;}
+.populer-sehirler li a:hover{ tex-decoration:underline}
 
-
-
-ul li {
-    color:#444; /* set color of list item to a dark gray */
-    list-style:none; /* if you’re not already using a reset */
-}
-
-ul li:before {
-    color:#ed0000; /* set color to red */
+.populer-sehirler ul li:before {
+    color:#9b999a; /* set color to red */
     content:"\2022"; /* /2022 is the numerical unicode for &bull; */
-    font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
-    padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
+    font-size:2.0em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+    padding-right:5px; /* give the bullet some padding from the text Make sure to use em*/
     position:relative;
-    top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+    top:4px; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
 }
+
+
+
+.center-info .infobox1 { width:310px; margin-right:10px;}
+.center-info .infobox1 .info-image{ margin-top:20px;margin-right:20px; background-position: 0px -242px; width:72px; height:72px; }
+.center-info .infobox1 .info{ width:215px; overflow:hidden;}
+.center-info .infobox1 .baslik{ margin-top:30px; margin-bottom:10px; font-size:16px; font-weight:bold; color: #166a9a; }
+.center-info .infobox1 .text{ font-size:12px; color: #a3a5a6; }
+
+
+.center-info .infobox2 { width:310px;  margin-right:10px;}
+.center-info .infobox2 .info-image{ margin-top:20px; margin-right:20px;background-position: 0px -316px; width:72px; height:72px; }
+.center-info .infobox2 .info{ width:215px; overflow:hidden;}
+.center-info .infobox2 .baslik{ margin-top:30px; margin-bottom:10px; font-size:16px; font-weight:bold; color: #166a9a; }
+.center-info .infobox2 .text{ font-size:12px; color: #a3a5a6; }
+
+.center-info .infobox3 { width:310px;}
+.center-info .infobox3 .info-image{ margin-top:20px; margin-right:20px;background-position: 0px -316px; width:72px; height:72px; }
+.center-info .infobox3 .info{ width:215px; overflow:hidden;}
+.center-info .infobox3 .baslik{ margin-top:30px; margin-bottom:10px; font-size:16px; font-weight:bold; color: #166a9a; }
+.center-info .infobox3 .text{ font-size:12px; color: #a3a5a6; }
+
+
+#one-cikanlar .baslik { margin: 40px 0px 25px 0px;}
+#one-cikanlar h1 {position: relative;} 
+#one-cikanlar h1 span { background: #fff; padding:0px 10px 0px 0px; position: relative; z-index: 5; font-size:16px; color:#9b999a;}
+#one-cikanlar h1.two+p { border-top: solid 1px #9b999a; margin-top: -7px;}
+
+#sondakika-firsatlari .baslik { margin-bottom:25px;}
+
+#sondakika-firsatlari h1 {position: relative;} 
+#sondakika-firsatlari h1 span { background: #fff; padding:0px 10px 0px 0px; position: relative; z-index: 5; font-size:16px; color:#166a9a;}
+#sondakika-firsatlari h1.two+p { border-top: solid 1px #9b999a; margin-top: -7px;}
+
+
+#guncel-rezervasyonlar .baslik { margin-bottom:25px;}
+#guncel-rezervasyonlar h1 {position: relative;} 
+#guncel-rezervasyonlar h1 span { background: #fff; padding:0px 10px 0px 0px; position: relative; z-index: 5; font-size:16px; color:#166a9a;}
+#guncel-rezervasyonlar h1.two+p { border-top: solid 1px #9b999a; margin-top: -7px;}
+
+
+
+
+.advert-box {overflow:hidden;}
+.advert-box a{text-decoration:none;}
+.advert-box li {width:300px; height:305px; float:left; margin-right:23px; margin-bottom:20px;}
+.advert-box .fiyatbox1{position:absolute; height:80px; width:100px; top:10px; right:10px; background-position:0px 0px; text-align:center; color:#fff;}
+.advert-box .fiyatbox2{position:absolute; height:80px; width:100px; top:10px; right:10px; background-position:0px 0px; text-align:center; color:#fff;}
+.advert-box .fiyatbox3{position:absolute; height:80px; width:100px; top:10px; right:10px; background-position:0px 0px; text-align:center; color:#fff;}
+.advert-box .fiyat{font-size:50px;padding-top:5px;}
+.advert-box sup {font-size:26px;}
+.advert-box .advert-detay {height:60px; background:#f7f6f6; border: 1px solid #e8e8e8; padding:10px 5px; overflow:hidden;}
+.advert-box h1{font-size:16px; line-height:18px; height:20px; font-weight:bold; color:#2573a1;margin-bottom:5px;}
+.advert-box h2{font-size:14px; line-height:14px; color:#33383a;margin-bottom:7px;}
+.advert-box h3{font-size:14px; line-height:14px; font-weight:bold; color:#33383a;}
+
+.advert-box sup { vertical-align: top; position:relative; top: 3px; }
+
+.nereden-ev-kiralamak  {width :298px; height:300px; border:1px solid #e3e3e3;padding-bottom:8px;}
+.nereden-ev-kiralamak ul li{ float:left; padding:4px 0px 0px 20px; width:45px; height:0px;  font-size:12px;}
+.populer-sehirler ul{overflow: hidden; margin-top:10px;}
+.nereden-ev-kiralamak ul li a{ color:#33383a;}
+.nereden-ev-kiralamak ul li a:hover{ tex-decoration:underline}
+
+.nereden-ev-kiralamak  ul li:before {
+    color:#fddb87; /* set color to red */
+    content:"\2022"; /* /2022 is the numerical unicode for &bull; */
+    font-size:2.0em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+    padding-right:5px; /* give the bullet some padding from the text Make sure to use em*/
+    position:relative;
+    top:4px; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+}
+
+
+
+.epostaliste-mailbirak { background: url(/img/bultene-uye-ol1.jpg) no-repeat; width:301px; height:197px; margin-left:20px;}
+.epostaliste-mailbirak input{margin-top: 147px;margin-left:32px; margin-right:5px;width: 170px; height:21px; float:left; padding:0px 5px;}
+.epostaliste-mailbirak .ekle-buton{margin-top: 147px; display:block; color:#494949; background:#efeff2; border:1px solid #acb1b3; width:44px; height:23px; text-align:center; text-decoration:none;line-height:24px; float:left;}

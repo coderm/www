@@ -11,8 +11,10 @@
         <meta property="og:url" content="">
         <meta property="og:site_name" content="Tatil Evim">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/flexslider.css" />
+        <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 
     </head>
     <body>
@@ -34,7 +36,7 @@
 
         <div class="top-bar">
             <div class="search-bar">
-                <form method="post" action="">
+                <form method="post" action="" name="toparea-search-form">
                     <div class="nereye radius"><input type="text" value="Nereye gitmek istiyorsunuz?" name="nereye" class="input-nereye"/><span class="sprite nereyeimg"></span></div>
                     <div class="tarih1 radius"><input type="text" value="Başlangıç tarihi" name="nereye" class="input-tarih1"/><span class="sprite tarih1img"></span></div>
                     <div class="tarih2 radius"><input type="text" value="Bitiş tarihi" name="nereye" class="input-tarih2"/><span class="sprite tarih2img"></span></div>
@@ -56,55 +58,67 @@
 
 
 
-            <div id="main-slider fleft"></div>
-            <div class="fleft">
-                <img src="" width="" height="" alt="Müşteri Hizmetleri"/>
+            <div class="main-slider fleft">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li><a href=""><img src="img/slider1.jpg" /></a></li>
+                        <li><a href=""><img src="img/slider1.jpg" /></a></li>
+                        <li><a href=""><img src="img/slider1.jpg" /></a></li>
+                        <li><a href=""><img src="img/slider1.jpg" /></a></li>
+                        <li><a href=""><img src="img/slider1.jpg" /></a></li>
+                    </ul>
+                </div>
+            </div>
 
-                <div class="populer-sehirler">
-                    <div class="baslik"></div>
+            <div class="fleft">
+                <img src="img/musteri-hizmetleri1.jpg" width="232" height="111" alt="Müşteri Hizmetleri"/>
+                <div class="populer-sehirler radius">
+                    <div class="baslik">En Popüler Şehirler</div>
                     <ul>
-                        <li>London</li>
-                        <li>Paris</li>
-                        <li>Vien</li>
-                        <li>Hamburg</li>
-                        <li>München</li>
-                        <li>Amsterdam</li>
-                        <li>İstanbul</li>
-                        <li>New York</li>
+                        <li><a hrhref="">London</a></li>
+                        <li><a hrhref="">Paris</a></li>
+                        <li><a hrhref="">Vien</a></li>
+                        <li><a hrhref="">Hamburg</a></li>
+                        <li><a hrhref="">München</a></li>
+                        <li><a hrhref="">Amsterdam</a></li>
+                        <li><a hrhref="">İstanbul</a></li>
+                        <li><a hrhref="">New York</a></li>
+                        <li><a hrhref="">New York</a></li>
+                        <li><a hrhref="">New York</a></li>
+                        <li><a hrhref="">New York</a></li>
+                        <li><a hrhref="">New York</a></li>
                     </ul>
                 </div>
             </div>
             <div class="clear"></div>
 
-            <div class="serit">
-                <img src=""  width="" height="" />
-            </div>
+            <img src="img/serit1.png"  width="950" height="20" class="mt15 " />
 
-            <div class="center-info">
+            <div class="center-info mb20">
 
                 <div class="infobox1 fleft">
-                    <div class="info-image fleft"></div>
+                    <div class="info-image fleft sprite"></div>
                     <div class="info fleft">
-                        <div class="baslik"></div>
-                        <div class="text"></div>
+                        <div class="baslik">Bulmak Çok Kolay</div>
+                        <div class="text">It was popularised in the 1960s withthe release of Letraset sheets containing Lorem Ipsum passages,</div>
                     </div>
                     <div class="clear"></div>
                 </div>
 
                 <div class="infobox2 fleft">
-                    <div class="info-image fleft"></div>
+                    <div class="info-image fleft sprite"></div>
                     <div class="info fleft">
-                        <div class="baslik"></div>
-                        <div class="text"></div>
+                        <div class="baslik">Sınırsız Destek</div>
+                        <div class="text">It was popularised in the 1960s withthe release of Letraset sheets containing Lorem Ipsum passages,</div>
                     </div>
                     <div class="clear"></div>
                 </div>
 
                 <div class="infobox3 fleft">
-                    <div class="info-image fleft"></div>
+                    <div class="info-image fleft sprite"></div>
                     <div class="info fleft">
-                        <div class="baslik"></div>
-                        <div class="text"></div>
+                        <div class="baslik">Güvenli Alışveriş</div>
+                        <div class="text">It was popularised in the 1960s withthe release of Letraset sheets containing Lorem Ipsum passages,</div>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -115,33 +129,110 @@
 
             <div id="one-cikanlar">
                 <div class="baslik">
-                    <h1>Öne Çıkanlar</h1>
+                    <h1 class="two"><span>ÖNE ÇIKANLAR</span></h1>
+                    <p></p>
                 </div>
 
                 <ul class="advert-box">
                     <li>
                         <a href="">
                             <div class="relative">
-                                <img src="advert_img" alt="" width="" height=""/>
-                                <div class="fiyat1">53 TL</div>
-                                <div class="fiyat1_bottom"></div>
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox1 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
                                 <div class="advert-detay">
                                     <h1>Didim Altınkum Kiralık Full Yazlık</h1>
-                                    <h2>Yenihisar-Efeler, Didim Aydın <br /><b>2 Oda + 1 Salon Tatil Evi</b></h2>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
                                 </div>
                             </div>
                         </a>
                     </li>
 
                     <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="resetmargin" style="margin:0px;">
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox3 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    
+                    <li style="margin:0px;">
                         <div class="nereden-ev-kiralamak">
-                            <img src="" alt="" width="" height="" /> 
+                            <img src="img/nereden-kiralamak-istiyorsunuz.png" alt="" width="295" height="168" /> 
                             <ul>
-                                <li>İstanbul</li>
-                                <li>İstanbul</li>
-                                <li>İstanbul</li>
-                                <li>İstanbul</li>
-                                <li>İstanbul</li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
+                                <li><a href="">İstanbul</a></li>
                             </ul>
                         </div>
 
@@ -151,41 +242,292 @@
 
 
             <div id="sondakika-firsatlari">
-                <div class="baslik"></div>
+                <div class="baslik">
+                    <h1 class="two"><span>SON DAKİKA FIRSATLARI</span></h1>
+                    <p></p>
+                </div>
                 <ul class="advert-box">
                     <li>
                         <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox1 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
 
+                                </div>
+                            </div>
                         </a>
                     </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="resetmargin" style="margin:0px;">
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox3 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox1 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="resetmargin" style="margin:0px;">
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox3 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    
                 </ul>
             </div>            
 
 
             <div id="guncel-rezervasyonlar">
-                <div class="baslik"></div>
+                <div class="baslik">
+                    <h1 class="two"><span>GÜNCEL REZARVASYONLAR</span></h1>
+                    <p></p>
+                </div>
                 <ul class="advert-box">
+
                     <li>
                         <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox1 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
 
+                                </div>
+                            </div>
                         </a>
                     </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="resetmargin" style="margin:0px;">
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox3 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox1 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="resetmargin" style="margin:0px;">
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox3 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox1 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox2 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="resetmargin" style="margin:0px;">
+                        <a href="">
+                            <div class="relative">
+                                <img src="img/sample-advert.jpg" alt="" width="300" height="225"/>
+                                <div class="fiyatbox3 spritefiyat">
+                                    <div class="fiyat">53<sup>&euro;</sup></div>
+                                </div>    
+                                <div class="advert-detay">
+                                    <h1>Didim Altınkum Kiralık Full Yazlık</h1>
+                                    <h2>Yenihisar-Efeler, Didim Aydın</h2>
+                                    <h3>2 Oda + 1 Salon Tatil Evi</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>            
 
 
-            <div class="serit">
-                <img src=""  width="" height="" />
-            </div>
-
+            <img src="img/serit2.png"  width="950" height="20" class="mt15 " />
+            
             <div class="main-bottom-info">
-                <img src=""  width="" height="" alt="where to stay in safranbolu" class="fleft"/>
+                <img src="img/tatilevim-cok-yakinda.jpg"  width="628" height="187" alt="where to stay in safranbolu" class="fleft" style="margin-top:5px;"/>
 
                 <div class="epostaliste-mailbirak fleft">
-                    <img src=""  width="" height="" alt="Eposta Listemize mailinizi bırakın"/>
                     <div>
                         <input type="text" class="mail-input">
-                            <a href="javascript:;" class="ekle-buton"></a>
+                        <a href="javascript:;" class="ekle-buton">EKLE</a>
+                         <div class="clear"></div>
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -219,61 +561,68 @@
                         <li><a href="" target="_blank" title="google" class="google-buton"></a></li>
                         <li><a href="" target="_blank" title="beğen buton"></a></li>
                         <li><a href="" target="_blank" title="tweet buton"></a></li>
-                        <ul>
+                    </ul>
 
-                            </div>
-                            <div class="clear"></div>
-                            </div>
-
-
-
-                            <div class="footer-bottom">
-
-                                <div class="cosum-ortak">
-                                    <h1 class="">ÇÖZÜM ORTAKLARIMIZ<h1>
-                                            <div class="logos"></div>
-                                            </div>
-
-                                            <div class="kurumsal">
-                                                <h1 class="">KURUMSAL<h1>
-                                                        <ul>
-                                                            <li><a href="">Hakkımızda</a></li>
-                                                            <li><a href="">İletişim</a></li>
-                                                            <li><a href="">Güvenli Rezervasyon Sistemi</a></li>
-                                                            <li><a href="">Kampanyalar</a></li>
-                                                        </ul>
-                                                        </div>
-
-                                                        <div class="kurumsal">
-                                                            <h1 class="">GİZLİLİK ve KULLANIM<h1>
-                                                                    <ul>
-                                                                        <li><a href="">Rezervasyon ve İptal</a></li>
-                                                                        <li><a href="">Üyelik Sözleşmesi</a></li>
-                                                                        <li><a href="">Sıkça Sorulan Sorular</a></li>
-                                                                    </ul>
-                                                                    </div>
-                                                                    <div class="clear"></div>
-
-                                                                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
 
 
 
-                                                                    </div>        
+            <div class="footer-bottom">
+
+                <div class="cosum-ortak">
+                    <h1 class="">ÇÖZÜM ORTAKLARIMIZ</h1>
+                    <div class="logos"></div>
+                </div>
+
+                <div class="kurumsal">
+                    <h1 class="">KURUMSAL</h1>
+                    <ul>
+                        <li><a href="">Hakkımızda</a></li>
+                        <li><a href="">İletişim</a></li>
+                        <li><a href="">Güvenli Rezervasyon Sistemi</a></li>
+                        <li><a href="">Kampanyalar</a></li>
+                    </ul>
+                </div>
+
+                <div class="kurumsal">
+                    <h1 class="">GİZLİLİK ve KULLANIM</h1>
+                    <ul>
+                        <li><a href="">Rezervasyon ve İptal</a></li>
+                        <li><a href="">Üyelik Sözleşmesi</a></li>
+                        <li><a href="">Sıkça Sorulan Sorular</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+
+            </div>
 
 
-                                                                    <div class="copyright">
 
-                                                                        <div class="copyright-text">Copyright 2013 www.tatilevim.com</div>
-                                                                        <img src="payu" width="" height="">
-                                                                            <img src="visa" width="" height="">
-                                                                                <img src="master" width="" height="">
-                                                                                    </div>
+        </div>        
 
 
+        <div class="copyright">
 
-                                                                                    </div>
+            <div class="copyright-text">Copyright 2013 www.tatilevim.com</div>
+            <img src="payu" width="" height="" />
+            <img src="visa" width="" height="" />
+            <img src="master" width="" height="" />
+        </div>
 
 
 
-                                                                                    </body>
-                                                                                    </html>
+    </div>
+
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>
+
+</body>
+</html>
