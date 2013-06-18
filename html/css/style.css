@@ -105,7 +105,7 @@ table {
 #toparea .top-bar .search-bar .kisi-sayisisiimg{float:right; margin-right:10px; margin-top:7px; width:25px; height:27px; background-position:0 -86px; }
 #toparea .top-bar .search-bar .kisi-sayisi .input-kisi-sayisi {height: 35px; border: none; background: none; width: 70px; margin-left: 15px; font-size: 14px; color: #166a9a;}
 
-#toparea .top-bar .search-bar .ara .buton{height: 40px; width:118px; border: none; margin-left: 20px; text-indent: -999px; background-position: -29px 0; }
+#toparea .top-bar .search-bar .ara .buton{height: 40px; width:118px; border: none; margin-left: 20px; text-indent: -999px; background-position: -29px 0; cursor:pointer; }
 
 
 
@@ -208,3 +208,35 @@ table {
 .epostaliste-mailbirak { background: url(/img/bultene-uye-ol1.jpg) no-repeat; width:301px; height:197px; margin-left:20px;}
 .epostaliste-mailbirak input{margin-top: 147px;margin-left:32px; margin-right:5px;width: 170px; height:21px; float:left; padding:0px 5px;}
 .epostaliste-mailbirak .ekle-buton{margin-top: 147px; display:block; color:#494949; background:#efeff2; border:1px solid #acb1b3; width:44px; height:23px; text-align:center; text-decoration:none;line-height:24px; float:left;}
+
+
+#bottom-area {margin-top:30px;}
+#bottom-area .bottom-line{width:100%; background:#29353b;padding: 10px 0px; }
+#bottom-area .bottom-line-center{ margin:0px auto; width:950px; }
+
+.bottom-line-center .mail-input2{ width:215px; height:21px; border:1px solid #d9d9d9; background:#fff;}
+.bottom-line-center .ekle-buton2{ color:#494949; background:#efeff2; border:1px solid #fff; width:45px; height:23px; text-align:center; text-decoration:none;line-height:24px;margin-left:5px;}
+
+.bottom-line-center .bottom-social{ margin-top:3px;}
+.bottom-line-center .bottom-social u{overflow:hidden;}
+.bottom-line-center .bottom-social ul li{float:left;margin-right:10px;}
+.bottom-line-center .bottom-social .facebook-buton{display: block; background-position: -68px -41px; width:20px; height:20px;}
+.bottom-line-center .bottom-social .twitter-buton{display: block; background-position: -98px -41px; width:20px; height:20px;}
+.bottom-line-center .bottom-social .google-buton{display: block; background-position: -127px -41px; width:20px; height:20px;}
+
+.footer-bottom{width:100%; background:#f0f0f0; height:130px; padding:15px 0px; border-top: 2px solid #d9d9d9; border-bottom: 2px solid #d9d9d9;}
+.footer-bottom-center{ margin:0px auto; width:950px; }
+.footer-bottom-center h1{ color:#000; font-size:11px; font-weight:bold; padding-bottom:15px; margin-bottom:15px;border-bottom: 2px dotted #000;}
+.footer-bottom-center .uye-kuruluslar{ width:550px; margin-right:100px;}
+.footer-bottom-center .footer-links li{ margin-top:10px; line-height:14px;}
+.footer-bottom-center .footer-links li a{ color:#838383; text-decoration:none;}
+.footer-bottom-center .footer-links a:hover{text-decoration:underline;}
+.footer-bottom-center .kurumsal{margin-right:20px;}
+
+.copyright{padding:10px 0px; margin:0px auto; width:950px;} 
+
+.copyright .copyright-text{ color:#5f5f5f; font-size:10px; width:645px;margin-top:10px;}
+.copyright .cards .payu{ background-position:0px -112px; width:75px; height:29px; display:block;}
+.copyright .cards .visa{ background-position:0px -146px; width:42px; height:27px; display:block; margin-left:135px;}
+.copyright .cards .master{ background-position:-47px -146px; width:42px; height:27px; display:block;margin-left:10px;}
+
