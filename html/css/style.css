@@ -55,8 +55,8 @@ table {
 .fright {float:right;}
 .clear{clear:both;}
 
-.sprite{ background:url(/img/sprite.png) no-repeat;}
-.spritefiyat{ background:url(/img/fiyat-sprite.png) no-repeat;}
+.sprite{ background:url(../img/sprite.png) no-repeat;}
+.spritefiyat{ background:url(../img/fiyat-sprite.png) no-repeat;}
 .radius{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -80,7 +80,7 @@ table {
 #toparea .header { width: 950px; margin:0px auto; position:relative;padding-bottom:30px;}
 
 #toparea .header .loginlink {font-size:14px; font-weight:bold;color:#166a9a; text-decoration:underline; position:absolute; top:20px; left:410px;}
-#toparea .header .ilanno-ara{position:absolute; top:8px; left:535px; width:205px; height:41px; background:url(/img/search-box.jpg) no-repeat;}
+#toparea .header .ilanno-ara{position:absolute; top:8px; left:535px; width:205px; height:41px; background:url(../img/search-box.jpg) no-repeat;}
 .header .ilanno-ara input[type="text"]{ width:120px; height:27px; float:left; margin-top:5px; margin-left:10px; border:none;}
 #toparea .header .ilanno-ara .buton { background: none repeat scroll 0 0 transparent;   border: none;   height: 41px;   margin-left: 29px;  text-indent: -9999px;   width: 45px; cursor:pointer;}
 #toparea .header .ucretsiz-ilan-ver { position:absolute; top:8px; left:762px;}
@@ -205,9 +205,13 @@ table {
 
 
 
-.epostaliste-mailbirak { background: url(/img/bultene-uye-ol1.jpg) no-repeat; width:301px; height:197px; margin-left:20px;}
+.epostaliste-mailbirak { background: url(../img/bultene-uye-ol1.jpg) no-repeat; width:301px; height:197px; margin-left:20px;}
 .epostaliste-mailbirak input{margin-top: 147px;margin-left:32px; margin-right:5px;width: 170px; height:21px; float:left; padding:0px 5px;}
 .epostaliste-mailbirak .ekle-buton{margin-top: 147px; display:block; color:#494949; background:#efeff2; border:1px solid #acb1b3; width:44px; height:23px; text-align:center; text-decoration:none;line-height:24px; float:left;}
+
+.sidebar-epostaliste-mailbirak { background: url(../img/bultene-uye-ol2.jpg) no-repeat; width:233px; height:157px;}
+.sidebar-epostaliste-mailbirak input{margin-top: 117px;margin-left:20px; margin-right:5px;width: 150px; height:18px; float:left; padding:0px 5px; border:1px solid #d9d9d9}
+.sidebar-epostaliste-mailbirak .ekle-buton{margin-top: 117px; display:block; color:#494949; background:#efeff2; border:1px solid #acb1b3; width:33px; height:17px; text-align:center; text-decoration:none;line-height:19px; float:left;}
 
 
 #bottom-area {margin-top:30px;}
@@ -240,3 +244,9 @@ table {
 .copyright .cards .visa{ background-position:0px -146px; width:42px; height:27px; display:block; margin-left:135px;}
 .copyright .cards .master{ background-position:-47px -146px; width:42px; height:27px; display:block;margin-left:10px;}
 
+
+#container .main-content {width:690px; border:1px solid #e8e8e8;  padding: 20px 0px; min-height:300px; margin-top:20px;margin-right:25px;}
+#container .main-content  .top-baslik{padding-bottom:20px; border-bottom:1px solid #e8e8e8; color:#2573a1; font-size:18px; text-indent: 30px;}
+#container .main-content  .content {padding: 20px; font-size:14px; line-height:22px; font-weight:bold; color:#3e494e; text-align:justify;}
+#container .main-content  .content  p{margin:10px 0px;}
+#container .main-content  .content  .red{color:#d3360b; line-height:30px;}
