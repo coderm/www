@@ -252,3 +252,46 @@ table {
 #container .main-content  .content  .red{color:#d3360b; line-height:30px;}
 #container .main-content  .content  .red2{color:#ff0000; line-height:30px;}
 #container .main-content  .content  .blue{color:#166a9a; line-height:30px;}
+#container .main-content  .content  .orange{color:#eb8b0e; line-height:30px;}
+#container .main-content  .content  .green{color:#5c7a13; line-height:30px;}
+
+
+#container .main-content  .content  .password-reminder p{ margin-bottom:20px;}
+#container .main-content  .content  .password-reminder input[type="text"]{ width:350px; height:20px; color:#166a9a; padding:5px 10px;}
+#container .main-content  .content  .password-reminder .submit{height:30px; padding:5px 10px; background:none; border:1px solid #7d7d7d; font-size:14px; cursor:pointer; margin-left:292px;}
+
+#container .main-content  .content  .register ul{overflow:hidden;}
+#container .main-content  .content  .register li{ margin-bottom:25px;}
+#container .main-content  .content  .register .text{ width:370px; float:right; height:20px; padding:5px 10px;border:1px solid #7d7d7d; font-size:14px;}
+#container .main-content  .content  .register .birthdate{ width:128px; padding:5px 10px; font-size:14px;}
+#container .main-content  .content  .register .submit{height:40px; padding:5px 10px; background:none; border:1px solid #7d7d7d; font-size:16px; cursor:pointer; margin-left:464px;}
+
+#container .main-content  .content  .register .info{padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #c9c9c9;}
+
+#container .main-content  .content  .contact-form ul{overflow:hidden;}
+#container .main-content  .content  .contact-form li{ margin-bottom:25px;}
+#container .main-content  .content  .contact-form .baslik{padding: 10px 20px; border:1px solid #c9c9c9; margin-bottom:20px; background:#f4f4f4;}
+#container .main-content  .content  .contact-form .text{ width:370px; float:right; height:20px; padding:5px 10px;border:1px solid #7d7d7d; font-size:14px;}
+#container .main-content  .content  .contact-form .textarea{ width:370px; float:right; height:80px; padding:5px 10px;border:1px solid #7d7d7d; font-size:14px;}
+#container .main-content  .content  .contact-form .submit{height:40px; padding:5px 10px; background:none; border:1px solid #7d7d7d; font-size:16px; cursor:pointer; margin-left:559px;}
+
+#container .main-content  .content .kampanyalar-listing .info  {padding-left:30px; padding-top:30px; width:300px;}
+#container .main-content  .content .kampanyalar-listing .info h1{ font-size:16px; margin-bottom:10px;}
+#container .main-content  .content .kampanyalar-listing .info h2{ font-size:20px;}
+#container .main-content  .content .kampanyalar-listing ul li { margin-bottom:25px; border:1px solid #e8e8e8; display:block;}
+#container .main-content  .content .kampanyalar-listing .fiyatbox1{position:absolute; height:46px; width:86px; top:55px; background-position:-159px 0px; text-align:center; color:#fff;}
+#container .main-content  .content .kampanyalar-listing  .fiyatbox2{position:absolute; height:46px; width:86px; top:40px; background-position:-159px -53px; text-align:center; color:#fff;}
+#container .main-content  .content .kampanyalar-listing  .fiyat{font-size:28px;padding-top:9px;}
+#container .main-content  .content .kampanyalar-listing sup{vertical-align: top;position: absolute;top: 3px; font-size:16px;}
+#container .main-content  .content .kampanyalar-listing a{text-decoration: none; color:#444;}
+
+
+#container .main-content  .content .kampanyalar-detay {padding :30px 40px;}
+#container .main-content  .content .kampanyalar-detay .info  {padding-left:20px; padding-top:20px;}
+#container .main-content  .content .kampanyalar-detay .info h1{ font-size:16px; margin-bottom:10px;}
+#container .main-content  .content .kampanyalar-detay .info h2{ font-size:20px; margin-bottom:25px;}
+#container .main-content  .content .kampanyalar-detay  .kampanya-don{ text-decoration:none; font-size:12px; padding:5px 10px; display:block; border:1px solid #e2e2e2; color:#444;}
+
+#container .main-content  .content .kampanyalar-detay .fiyatbox1{position:absolute; height:105px; width:193px; top:245px; right:0px; background-position:-84px -251px; text-align:center; color:#fff;}
+#container .main-content  .content .kampanyalar-detay .fiyat{font-size:80px;padding-top:35px;}
+#container .main-content  .content .kampanyalar-detay  sup {vertical-align: top;position: absolute;top: 20px; font-size:50px;}
