@@ -295,3 +295,41 @@ table {
 #container .main-content  .content .kampanyalar-detay .fiyatbox1{position:absolute; height:105px; width:193px; top:245px; right:0px; background-position:-84px -251px; text-align:center; color:#fff;}
 #container .main-content  .content .kampanyalar-detay .fiyat{font-size:80px;padding-top:35px;}
 #container .main-content  .content .kampanyalar-detay  sup {vertical-align: top;position: absolute;top: 20px; font-size:50px;}
+
+
+
+.accordion {
+	margin: 0;
+    padding:10px;
+    height:20px;
+    text-decoration:none;
+    color: #d3360b;
+    font-size:14px;
+}
+#accordion .main{
+    width: 580px;
+}
+#accordion .border{
+    border:#f0f0f0 1px solid;
+}
+.accordion-open,
+.collapse-open {
+	
+}
+.accordion-open span,
+.collapse-open span {
+	display:block;
+	float:right;
+	padding:10px;
+}
+.accordion-open span,
+.collapse-open span {
+	background:url(../img/minus.png) center center no-repeat;
+}
+.accordion-close span,
+.collapse-close span {
+	display:block;
+	float:right;
+	background:url(../img/plus.png) center center no-repeat;
+	padding:10px;
+}
