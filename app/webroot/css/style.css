@@ -159,6 +159,7 @@ table {
 #one-cikanlar h1.two+p { border-top: solid 1px #9b999a; margin-top: -7px;}
 
 #sondakika-firsatlari .baslik { margin-bottom:25px;}
+
 #sondakika-firsatlari h1 {position: relative;} 
 #sondakika-firsatlari h1 span { background: #fff; padding:0px 10px 0px 0px; position: relative; z-index: 5; font-size:16px; color:#166a9a;}
 #sondakika-firsatlari h1.two+p { border-top: solid 1px #9b999a; margin-top: -7px;}
@@ -169,11 +170,6 @@ table {
 #guncel-rezervasyonlar h1 span { background: #fff; padding:0px 10px 0px 0px; position: relative; z-index: 5; font-size:16px; color:#166a9a;}
 #guncel-rezervasyonlar h1.two+p { border-top: solid 1px #9b999a; margin-top: -7px;}
 
-
-#ilginizi-cekebilir .baslik { margin-bottom:25px;}
-#ilginizi-cekebilir  h1 {position: relative;} 
-#ilginizi-cekebilir  h1 span { background: #fff; padding:0px 10px 0px 0px; position: relative; z-index: 5; font-size:16px; color:#166a9a;}
-#ilginizi-cekebilir  h1.two+p { border-top: solid 1px #9b999a; margin-top: -7px;}
 
 
 
@@ -341,11 +337,7 @@ table {
 
 
 
-<<<<<<< HEAD
 #container  .ilan-content {font-size:14px; line-height:22px; width:700px;margin-right:20px;}
-=======
-#container  .ilan-content {font-size:14px; line-height:22px; width:700px;margin-right:18px;}
->>>>>>> bf9b8796710c262c3f278650c7f32481d3d79528
 #container   .ilan-content   p{margin:10px 0px;}
 #container  .ilan-content   .red{color:#d3360b; line-height:30px;}
 #container   .ilan-content   .red2{color:#ff0000; line-height:30px;}
@@ -398,21 +390,4 @@ table {
     padding-right:5px; /* give the bullet some padding from the text Make sure to use em*/
     position:relative;
     top:4px; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
-<<<<<<< HEAD
 }
-=======
-}
-
-.rezervasyon-yap-sidebar{display:block; background:#166a9a; padding:10px;}
-
-.rezervasyon-yap-sidebar .tarih1{ background-color:#f4f4f4; width:175px; height:40px; margin-left:20px; display:block;}
-.rezervasyon-yap-sidebar .tarih1img{float:right; margin-right:10px; margin-top:7px; width:25px; height:27px; background-position:0px -28px; }
-.rezervasyon-yap-sidebar .tarih1 .input-tarih1{height: 35px; border: none; background: none; width: 100px; margin-left: 10px; font-size: 14px; color: #166a9a;}
-.rezervasyon-yap-sidebar .tarih2{ background-color:#f4f4f4; width:175px; height:40px; margin-left:20px;}
-.rezervasyon-yap-sidebar .tarih2img{float:right; margin-right:10px; margin-top:7px; width:25px; height:27px; background-position:0 -57px; }
-.rezervasyon-yap-sidebar .tarih2 .input-tarih2{height: 35px; border: none; background: none; width: 100px; margin-left: 10px; font-size: 14px; color: #166a9a;}
-.rezervasyon-yap-sidebar .kisi-sayisi{ background-color:#f4f4f4; width:175px; height:40px;  margin-left:20px;}
-.rezervasyon-yap-sidebar .kisi-sayisisiimg{float:right; margin-right:10px; margin-top:7px; width:25px; height:27px; background-position:0 -86px; }
-.rezervasyon-yap-sidebar .kisi-sayisi .input-kisi-sayisi {height: 35px; border: none; background: none; width: 70px; margin-left: 15px; font-size: 14px; color: #166a9a;}
-.rezervasyon-yap-sidebar .ara .buton{margin-left:120px;padding:10px; color:#fff; font-size:15px; border: none; text-align: center; background:#f8b718; cursor:pointer; }
->>>>>>> bf9b8796710c262c3f278650c7f32481d3d79528

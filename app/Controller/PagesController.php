@@ -75,7 +75,10 @@ class PagesController extends AppController {
             $this->LoadModel('Fixed');
             $this->set('mainBanners', $this->Fixed->mainBanners());
             $this->LoadModel('Advertisement');
+            $this->set('typeOfHoliday', $this->Fixed->popularDestinations());
+            $this->set('popularDestinations', $this->Fixed->popularDestinations());
             $this->set('homePageAdverts', $this->Advertisement->homePageAdverts(5));
+            $this->set('homePageAdverds', $this->Advertisement->homePageAdverts(5));
             $this->set('lastBooksAdverts', $this->Advertisement->lastBooksAdverts(5));
         }
 

@@ -57,7 +57,8 @@ class AppModel extends Model {
         }
         return $id;
     }
-     public function returnLanguage($LanguageId) {
+
+    public function returnLanguage($LanguageId) {
         switch ($LanguageId) {
             case 1:
                 $lang = 'tur';
@@ -71,7 +72,7 @@ class AppModel extends Model {
             case 4:
                 $lang = 'ger';
                 break;
-             case 5:
+            case 5:
                 $lang = 'spa';
                 break;
             default:
@@ -79,6 +80,11 @@ class AppModel extends Model {
                 break;
         }
         return $lang;
+    }
+
+    function formatFormDateToMySQLDate($dateString) {
+        $a = explode('-', $dateString);
+        return $a[2] . '-' . $a[1] . '-' . $a[0];
     }
 
     public function convertCurrency($currencyId = NULL, $siteCurrency = NULL) {

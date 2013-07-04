@@ -30,10 +30,10 @@ class Advertisement extends AppModel {
             'className' => 'Neighborhood',
             'foreignKey' => 'neighborhood_id'
         ),
-        'District' => array(
-            'className' => 'District',
-            'foreignKey' => 'district_id'
-        ),
+        /*  'District' => array(
+          'className' => 'District',
+          'foreignKey' => 'district_id'
+          ), */
         'CurrencyUnit' => array(
             'className' => 'CurrencyUnit',
             'foreignKey' => 'currency_id'
@@ -202,6 +202,7 @@ class Advertisement extends AppModel {
     public function fastSearch($searchString, $page = 1, $count = 25) {
 
         if (is_numeric($searchString)) {
+
             $this->recursive = -1;
             $result = $this->findByAdvertId($searchString);
             if ($result['Advertisement']['status'] == 'active')
@@ -275,19 +276,22 @@ class Advertisement extends AppModel {
 
     public function detailSearch($data, $page = 1, $count = 25) {
 
-        $startDate = $this->formatFormDateToMySQLDate($data['Search']['startDate']);
-        $endDate = $this->formatFormDateToMySQLDate($data['Search']['endDate']);
         //dolu ilanlar
-        $params = array();
-        $params['conditions']['start_date <'] = $endDate;
-        $params['conditions']['end_date >'] = $startDate;
-        $params['conditions']['status'] = 'active';
-        $params['fields'] = 'DISTINCT advert_id';
-        $this->Booking->recursive = -1;
-        $books = $this->Booking->find('all', $params);
         $notInAdvertIds = array();
-        foreach ($books as $advertId) {
-            $notInAdvertIds[] = $advertId['Booking']['advert_id'];
+        $advertIds = array();
+        if (isset($data['Search']['startDate']) && isset($data['Search']['endDate'])) {
+            $startDate = $this->formatFormDateToMySQLDate($data['Search']['startDate']);
+            $endDate = $this->formatFormDateToMySQLDate($data['Search']['endDate']);
+            $params = array();
+            $params['conditions']['start_date <'] = $endDate;
+            $params['conditions']['end_date >'] = $startDate;
+            $params['conditions']['status'] = 'active';
+            $params['fields'] = 'DISTINCT advert_id';
+            $this->Booking->recursive = -1;
+            $books = $this->Booking->find('all', $params);
+            foreach ($books as $advertId) {
+                $notInAdvertIds[] = $advertId['Booking']['advert_id'];
+            }
         }
 
         // bolge arama
@@ -300,7 +304,7 @@ class Advertisement extends AppModel {
             $params['fields'] = 'advert_id';
             $this->recursive = 0;
             $location = $this->find('all', $params);
-            $advertIds = array();
+
             foreach ($location as $advertId) {
                 $advertIds[] = $advertId['Advertisement']['advert_id'];
             }
@@ -310,14 +314,17 @@ class Advertisement extends AppModel {
 
 
         if (isset($notInAdvertIds[0]))
-            $data['conditions']['Not']['Advertisement.advert_id'] = $notInAdvertIds;
+            $return['conditions']['Not']['Advertisement.advert_id'] = $notInAdvertIds;
         if (isset($advertIds[0]))
-            $data['conditions']['Advertisement.advert_id'] = $advertIds;
-        $data['conditions']['Advertisement.max_guests >='] = $data['Search']['peopleCount'];
-        $data['limit'] = $count;
-        $data['page'] = $page;
-        $data['order'] = 'created desc';
-        return $this->advertList($data, true);
+            $return['conditions']['Advertisement.advert_id'] = $advertIds;
+        if (isset($data['Search']['peopleCount']))
+            $return['conditions']['Advertisement.max_guests >='] = $data['Search']['peopleCount'];
+        $return['conditions']['status'] = 'active';
+        $return['limit'] = $count;
+        $return['page'] = $page;
+        $return['order'] = 'created desc';
+
+        return $this->advertList($return, true);
     }
 
     public function advertData($advertId) {
@@ -874,13 +881,35 @@ class Advertisement extends AppModel {
         $result['Advertisement']['city'] = $this->City->idToMessageTextId($result['Advertisement']['city_id']);
         $result['Advertisement']['county'] = $this->County->idToMessageTextId($result['Advertisement']['county_id']);
         $result['Advertisement']['neighborhood'] = $this->Neighborhood->idToMessageTextId($result['Advertisement']['neighborhood_id']);
+        $result['Advertisement']['geoLocation'] = $this->propertiesToArray($result['Advertisement']['geoLocation']);
         $pictures = unserialize(str_replace('s:1:""', 's:1:" "', $result['Advertisement']['picture']));
         foreach ($pictures as $key => $picture) {
-            $pictures[$key]['path'] = '/resimler/' . urlencode ($result['Advertisement']['city']) . '-' . urlencode ($result['Advertisement']['county']) . '/' . $result['Advertisement']['advert_id'] . '/' . str_replace('_', '-', urlencode ($picture['label'])) . '_640_480_'. $picture['name'];
-            $pictures[$key]['thumb'] = '/resimler/' . urlencode ($result['Advertisement']['city']) . '-' . urlencode ($result['Advertisement']['county']) . '/' . $result['Advertisement']['advert_id'] . '/' . str_replace('_', '-', urlencode ($picture['label'])) . '_300_225_'. $picture['name'];
-            $pictures[$key]['scrool'] = '/resimler/' . urlencode ($result['Advertisement']['city']) . '-' . urlencode ($result['Advertisement']['county']) . '/' . $result['Advertisement']['advert_id'] . '/' . str_replace('_', '-', urlencode ($picture['label'])) . '_128_96_'. $picture['name'];
+            $pictures[$key]['path'] = '/resimler/' . urlencode($result['Advertisement']['city']) . '-' . urlencode($result['Advertisement']['county']) . '/' . $result['Advertisement']['advert_id'] . '/' . str_replace('_', '-', urlencode($picture['label'])) . '_640_480_' . $picture['name'];
+            $pictures[$key]['thumb'] = '/resimler/' . urlencode($result['Advertisement']['city']) . '-' . urlencode($result['Advertisement']['county']) . '/' . $result['Advertisement']['advert_id'] . '/' . str_replace('_', '-', urlencode($picture['label'])) . '_300_225_' . $picture['name'];
+            $pictures[$key]['scrool'] = '/resimler/' . urlencode($result['Advertisement']['city']) . '-' . urlencode($result['Advertisement']['county']) . '/' . $result['Advertisement']['advert_id'] . '/' . str_replace('_', '-', urlencode($picture['label'])) . '_128_96_' . $picture['name'];
         }
+        $result['Advertisement']['link'] = array('controller' => 'Advertisements',
+            'action' => 'advert',
+            $result['Advertisement']['city'],
+            $result['Advertisement']['county'],
+            $result['Advertisement']['neighborhood'],
+            $result['Advertisement']['advert_id'],
+            $result['Advertisement']['title']['tur']);
+        switch (rand(1, 3)) {
+            case 1:
 
+                $color = 'red';
+                break;
+            case 2:
+
+                $color = 'green';
+                break;
+            case 3:
+
+                $color = 'orange';
+                break;
+        }
+        $result['Advertisement']['color'] = $color;
 
         $result['Advertisement']['picture'] = $pictures;
 
@@ -1300,11 +1329,14 @@ class Advertisement extends AppModel {
                 $return = $advert['Advertisement']['rate'];
             else {
                 $houseHolder = $this->HouseHolder->userData($advert['Advertisement']['householder_s_id']);
-                if ($houseHolder['User']['rate'] > 2) {
-                    $return = $houseHolder['User']['rate'];
-                } else {
+                if (isset($houseHolder['User']['rate']))
+                    if ($houseHolder['User']['rate'] > 2) {
+                        $return = $houseHolder['User']['rate'];
+                    } else {
+                        $return = $this->getGlobalRate();
+                    }
+                else
                     $return = $this->getGlobalRate();
-                }
             }
         } else {
             $return = $this->getGlobalRate();

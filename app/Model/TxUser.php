@@ -26,24 +26,26 @@ class TxUser extends AppModel {
 
         $return = array();
         $result['User']['userSId'] = $userId;
-        $result['User']['otherPhone'] = unserialize($result['User']['phone']);
+        if (isset($result['User']['phone']))
+            $result['User']['otherPhone'] = unserialize($result['User']['phone']);
         $return['User'] = array_merge($result['User'], $this->UserGroupDetail->userDetails($userId));
         if (isset($return['User']['ldc_user_phone']))
             $return['User']['ldc_user_phone'] = $this->propertiesToArray($return['User']['ldc_user_phone']);
         if (isset($return['User']['ldc_user_bank']))
             $bank = $this->propertiesToArray($return['User']['ldc_user_bank']);
-
-        $return['User']['email'] = $return['User']['ldc_primary_email'];
+        if (isset($return['User']['ldc_primary_email']))
+            $return['User']['email'] = $return['User']['ldc_primary_email'];
         if (isset($return['User']['ldc_user_phone']['code']))
             $return['User']['phoneCountryCode'] = $return['User']['ldc_user_phone']['code'];
         if (isset($return['User']['ldc_user_phone']['number']))
             $return['User']['phoneNumber'] = $return['User']['ldc_user_phone']['number'];
         if (isset($return['User']['ldc_user_tc_no']))
             $return['User']['tcId'] = $return['User']['ldc_user_tc_no'];
-        $return['User']['dateOfBirth']['year'] = date('Y', strtotime($return['User']['birth_date']));
-        $return['User']['dateOfBirth']['month'] = date('m', strtotime($return['User']['birth_date']));
-        $return['User']['dateOfBirth']['day'] = date('d', strtotime($return['User']['birth_date']));
-
+        if (isset($return['User']['birth_date'])) {
+            $return['User']['dateOfBirth']['year'] = date('Y', strtotime($return['User']['birth_date']));
+            $return['User']['dateOfBirth']['month'] = date('m', strtotime($return['User']['birth_date']));
+            $return['User']['dateOfBirth']['day'] = date('d', strtotime($return['User']['birth_date']));
+        }
 
 
         if (isset($return['User']['ldc_invoice_title']))
