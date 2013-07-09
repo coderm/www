@@ -1,0 +1,287 @@
+<!doctype html><html xmlns:fb="http://ogp.me/ns/fb#">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Tatilevim.com</title>
+	<link rel="shortcut icon" href="http://www.tatilevim.com/favicon.ico" type="image/x-icon">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta property="og:title" content="">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <meta property="og:site_name" content="Tatil Evim">
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/flexslider.css" />
+        <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="js/jquery-accordion.js"></script>
+
+    </head>
+    <body>
+
+	<div id="toparea">
+	    <div class="header">
+		<a href="/" class="site-logo"><img  src="/img/tatilevim-logo.jpg" width="264" height="54" alt="Tatil Evim" /></a>
+		<a href="/login" class="loginlink">Kullanıcı Girişi</a>
+		<div class="ilanno-ara">
+		    <form method="post" action="">
+			<input type="text" name="search-words" value="İlan No İle Arama" />
+			<input type="submit" name="submit" class="buton"/>
+			<div class="clear"></div>
+		    </form>
+		</div>
+		<a class="ucretsiz-ilan-ver" href="/ucretsiz-ilan-ver" ><img  src="/img/ucretsiz-ilan-ver.jpg" width="188" height="39" alt="Ücretsiz İlan Ver" /></a>
+
+	    </div>
+
+	    <div class="top-bar">
+		<div class="search-bar">
+		    <form method="post" action="" name="toparea-search-form">
+			<div class="nereye radius"><input type="text" value="Nereye gitmek istiyorsunuz?" name="nereye" class="input-nereye"/><span class="sprite nereyeimg"></span></div>
+			<div class="tarih1 radius"><input type="text" value="Başlangıç tarihi" name="nereye" class="input-tarih1"/><span class="sprite tarih1img"></span></div>
+			<div class="tarih2 radius"><input type="text" value="Bitiş tarihi" name="nereye" class="input-tarih2"/><span class="sprite tarih2img"></span></div>
+			<div class="kisi-sayisi radius"><input type="text" value="Kişi sayısı" name="nereye" class="input-kisi-sayisi"/><span class="sprite kisi-sayisisiimg"></span></div>
+			<div class="ara"><input type="submit" class="sprite buton"/></div>
+			<div class="clear"></div>
+		    </form>
+		</div>
+
+	    </div>
+	</div>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<div id="container">
+	    <div class="main">
+
+		<!-- orta alan burdan başlıyor-->            
+
+			<h1 class="top-baslik" style="padding-bottom:5px; margin-bottom:10px;">ARAMA SONUÇLARI</h1>
+		
+			<!-- arama sol alan başlıyor-->            
+			<div class="arama-left fleft">
+				<div class="harita"></div>
+				
+				<form mtedhod="post" action="" name="aramaKriterFormu">
+				<div class="radius" style="border:1px solid #eee;">
+					<div class="aramasecenekleri" id="accordionArama">
+					
+						<!-- panel -->
+							<div class="radius border">
+								<h3 class="accordionArama accordion-open" id="body-section1">Oda Tipi Seçin<span></span></h3>
+								<div style="display: block;" class="xxxx">
+									<div class="content radius">
+										<p>
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end panel -->						
+
+						<!-- panel -->
+							<div class="radius border">
+								<h3 class="accordionArama accordion-close" id="body-section2">Fiyat Aralığı<span></span></h3>
+								<div style="display: none;">
+									<div class="content radius">
+										<p>
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end panel -->						
+
+							
+						<!-- panel -->
+							<div class="radius border">
+								<h3 class="accordionArama accordion-close" id="body-section3">Komşular<span></span></h3>
+								<div style="display: none;">
+									<div class="content radius">
+										<p>
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end panel -->						
+							
+							<!-- panel -->
+							<div class="radius border">
+								<h3 class="accordionArama accordion-close" id="body-section4">Arama Kriteri<span></span></h3>
+								<div style="display: none;">
+									<div class="content radius">
+										<p>
+											<input type="text" name="" value="Aranacak Kelime"> <span><input type="submit" value="ARA" style="border:none; background:none; margin-left:30px;"></span><br />
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end panel -->									
+							
+					
+					</div>
+				</div>
+				</form>
+			</div>
+			<!-- arama sol alan bitiyor-->  
+			
+			
+			<!-- arama sağ alan başlıyor-->  
+			<div class="arama-right fleft">
+			</div>
+			<!-- arama sağ alan bitiyor-->  
+			<div class="clear"></div>
+
+
+		<!-- orta alan burda bitiyor-->  
+	    </div>
+	</div>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div id="bottom-area">
+	    <div class="bottom-bar">
+		<div class="bottom-line">
+		    <div class="bottom-line-center">
+			<div class="fleft" style="width:300px;">
+			    <input type="text" class="mail-input2 fleft" />
+			    <a href="javascript:;" class="ekle-buton2 fleft">EKLE</a>
+			    <div class="clear"></div>
+			</div>
+			<div class="bottom-social fright">
+			    <ul>
+				<li><a href="" target="_blank" title="facebook" class="facebook-buton sprite"></a></li>
+				<li><a href="" target="_blank" title="twitter" class="twitter-buton sprite"></a></li>
+				<li><a href="" target="_blank" title="google" class="google-buton sprite"></a></li>
+				<li><fb:like href="http://www.tatilevim.com" send="false" layout="button_count" width="400" show_faces="false"></fb:like></li>
+				<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.tatilevim.com" data-lang="tr" >Tweet</a></li>
+			    </ul>
+			</div>
+			<div class="clear"></div>    
+		    </div>
+
+		</div>
+
+
+
+		<div class="footer-bottom">
+		    <div class="footer-bottom-center">
+
+			<div class="uye-kuruluslar fleft">
+			    <h1 class="">ÜYE KURULUŞLARIMIZ</h1>
+			    <div class="logos"><img src="img/uye-kuruluslar.jpg" width="550" height="76"></div>
+			</div>
+
+			<div class="footer-links fleft">  
+			    <div class="kurumsal fleft">
+				<h1 class="">KURUMSAL</h1>
+				<ul>
+				    <li><a href="">Hakkımızda</a></li>
+				    <li><a href="">İletişim</a></li>
+				    <li><a href="">Güvenli Rezervasyon Sistemi</a></li>
+				    <li><a href="">Kampanyalar</a></li>
+				</ul>
+			    </div>
+
+			    <div class="gizlilik fleft">
+				<h1 class="">GİZLİLİK ve KULLANIM</h1>
+				<ul>
+				    <li><a href="">Rezervasyon ve İptal</a></li>
+				    <li><a href="">Üyelik Sözleşmesi</a></li>
+				    <li><a href="">Sıkça Sorulan Sorular</a></li>
+				</ul>
+			    </div>
+			    <div class="clear"></div>
+
+			</div> 
+			<div class="clear"></div>
+
+		    </div>
+		</div>
+
+	    </div>        
+
+	    <div class="copyright">
+		<div class="copyright-text fleft">Copyright 2013 www.tatilevim.com</div>
+		<div class="cards fleft">
+		    <a href="" class="payu fleft sprite"></a>
+		    <a href="" class="visa fleft sprite"></a>
+		    <a href="" class="master fleft sprite"></a>
+		    <div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	    </div>
+
+
+	</div>
+
+	
+	
+<script type="text/javascript">
+	$(document).ready(function() {
+		//accordion
+		$('h3.accordionArama').accordion({
+			defaultOpen: 'section1',
+			cookieName: 'accordion_nav2',
+			speed: 'slow',
+			animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
+				elem.next().slideFadeToggle(opts.speed);
+			},
+			animateClose: function (elem, opts) { //replace the standard slideDown with custom function
+				elem.next().slideFadeToggle(opts.speed);
+			}
+		});
+		//custom animation for open/close
+		$.fn.slideFadeToggle = function(speed, easing, callback) {
+			return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
+		};
+		
+
+	});
+</script>	
+
+	<!---->
+
+    </body>
+</html>

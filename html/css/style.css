@@ -250,7 +250,7 @@ table {
 
 
 #container .main-content {width:690px; border:1px solid #e8e8e8;  padding: 20px 0px; min-height:480px; margin-top:20px;margin-right:25px;}
-#container .main-content  .top-baslik{padding-bottom:20px; border-bottom:1px solid #e8e8e8; color:#2573a1; font-size:18px; text-indent: 30px;}
+#container .top-baslik{padding-bottom:20px; border-bottom:1px solid #e8e8e8; color:#2573a1; font-size:18px; text-indent: 30px;}
 #container .main-content  .content {padding: 20px; font-size:14px; line-height:22px; font-weight:bold; color:#3e494e; text-align:justify;}
 #container .main-content  .content  p{margin:10px 0px;}
 #container .main-content  .content  .red{color:#d3360b; line-height:30px;}
@@ -338,6 +338,44 @@ table {
 	padding:10px;
 }
 
+
+
+
+.accordionArama {
+	margin: 0;
+    padding:10px;
+    height:20px;
+    text-decoration:none;
+    color: #2676a5;
+    font-size:14px;
+	font-weight:bold;
+	width: 210px;
+}
+
+.accordionArama .content{ padding:10px; color: #3e494e;}
+.accordionArama  p{ 	0px 10px 10px 15px }
+
+#accordionArama .border{
+    border:#f0f0f0 1px solid;
+}
+
+#accordionArama .accordion-open span,
+#accordionArama .collapse-open span {
+	display:block;
+	float:right;
+	padding:10px;
+}
+#accordionArama  .accordion-open span,
+#accordionArama  .collapse-open span {
+	background:url(../img/minusblue.png) center center no-repeat;
+}
+#accordionArama  .accordion-close span,
+#accordionArama .collapse-close span {
+	display:block;
+	float:right;
+	background:url(../img/plusblue.png) center center no-repeat;
+	padding:10px;
+}
 
 
 
