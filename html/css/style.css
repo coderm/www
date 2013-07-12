@@ -352,8 +352,8 @@ table {
 	width: 210px;
 }
 
-.accordionArama .content{ padding:10px; color: #3e494e;}
-.accordionArama  p{ 	0px 10px 10px 15px }
+#accordionArama .content{ padding:10px; color: #3e494e;}
+#accordionArama  p{ 	0px 10px 10px 15px }
 
 #accordionArama .border{
     border:#f0f0f0 1px solid;
@@ -451,3 +451,25 @@ table {
 .rezervasyon-yap-sidebar .kisi-sayisi .input-kisi-sayisi {height: 35px; border: none; background: none; width: 70px; margin-left: 15px; font-size: 14px; color: #166a9a;}
 .rezervasyon-yap-sidebar .ara .buton{margin-left:120px;padding:10px; color:#fff; font-size:15px; border: none; text-align: center; background:#f8b718; cursor:pointer; }
 
+
+#arama-liste {margin-left:20px;}
+
+#arama-liste .liste li{margin-bottom:15px; padding-right:15px; border:1px solid #e7e7e7;width:665px;}
+#arama-liste div.info{padding:15px; width:350px;}
+
+#arama-liste .fiyatbox1{height:89px; width:105px; margin-top:15px;background-position:-86px -372px; text-align:center; color:#fff;}
+#arama-liste .title{font-size:18px;padding-top:5px;}
+#arama-liste .fiyat{font-size:30px;padding-top:5px; position:relative;}
+#arama-liste .fiyat sup { vertical-align: top; position:absolute; top: 3px; font-size:24px; margin-left:3px; }
+#arama-liste .advert-box sup {font-size:26px;}
+#arama-liste .info h1{font-size:16px; line-height:18px; height:20px; font-weight:bold; color:#2573a1;margin-bottom:5px;}
+#arama-liste .info h2{font-size:14px; line-height:14px; color:#33383a;margin-bottom:7px;}
+#arama-liste .info h3{font-size:14px; line-height:14px; font-weight:bold; color:#33383a;}
+
+#arama-liste  .pagination ul {overflow:hidden; float:right;margin-bottom:15px;}
+#arama-liste  .pagination ul li {float:left; margin-right:5px; font-size:16px;}          
+#arama-liste  .pagination ul li a{text-decoration:none; width:32px; height:27px; border:1px solid #e7e7e7; color:#29353b; display:block;line-height:28px;text-align:center;}          
+#arama-liste  .pagination ul li a:hover, #arama-liste  .pagination .active{color:#fff; background:#29353b;}
+
+#arama-liste  .pagination .previous, #arama-liste  .pagination .previous:hover{background:url(../img/sprite.png) no-repeat;background-position: -88px -113px;}
+#arama-liste  .pagination .next, #arama-liste  .pagination .next:hover{background:url(../img/sprite.png) no-repeat;background-position: -121px -113px;}

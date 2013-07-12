@@ -12,9 +12,13 @@
         <meta property="og:site_name" content="Tatil Evim">
         <link type="text/css" rel="stylesheet" href="css/style.css" />
         <link type="text/css" rel="stylesheet" href="css/flexslider.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-        <script type="text/javascript" src="js/jquery-accordion.js"></script>
+		<script type="text/javascript" src="js/jquery-accordion.js"></script>
+
+		
 
     </head>
     <body>
@@ -25,7 +29,7 @@
 		<a href="/login" class="loginlink">Kullanıcı Girişi</a>
 		<div class="ilanno-ara">
 		    <form method="post" action="">
-			<input type="text" name="search-words" value="İlan No İle Arama" />
+			<input type="text" name="search-words" title="İlan No İle Arama"  class="defaultblur" />
 			<input type="submit" name="submit" class="buton"/>
 			<div class="clear"></div>
 		    </form>
@@ -97,10 +101,10 @@
 								<div style="display: none;">
 									<div class="content radius">
 										<p>
-											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
-											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
-											<input type="checkbox" name="" ><span> Entire home/apt</span><br />
+											<input type="text" id="fiyataraligi" style="border: 0; color:#2676a5; font-weight: bold; font-size:18px; text-align:center;" />
+
 										</p>
+										<div id="slider-range"></div>
 									</div>
 								</div>
 							</div>
@@ -128,7 +132,7 @@
 								<div style="display: none;">
 									<div class="content radius">
 										<p>
-											<input type="text" name="" value="Aranacak Kelime"> <span><input type="submit" value="ARA" style="border:none; background:none; margin-left:30px;"></span><br />
+											<input type="text" name="" title="Aranacak Kelime" class="defaultblur"> <span><input type="submit" value="ARA" style="border:none; background:none; margin-left:20px; color:#2676a5;cursor:pointer;"></span><br />
 										</p>
 									</div>
 								</div>
@@ -145,11 +149,87 @@
 			
 			<!-- arama sağ alan başlıyor-->  
 			<div class="arama-right fleft">
+			
+					<div id="arama-liste">
+							<div class="pagination">
+								<ul>
+									<li><a href="" class="previous sprite"></a></li>
+									<li><a href="">1</a></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><a href="" class="next sprite"></a></li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							
+							<ul class="liste"> 
+								<li>
+									<a href="">
+										<img src="img/sample-advert2.png" alt="" width="180" height="135" style="float:left;"/>
+										<div class="fleft info">
+											<h1>Didim Altınkum Kiralık Full Yazlık</h1>
+											<h2>Yenihisar-Efeler, Didim Aydın</h2>
+											<h3>2 Oda + 1 Salon Tatil Evi</h3>
+										</div>
+										<div class="fiyatbox1 sprite fright">
+											<div class="title">per night</div>
+											<div class="fiyat">53<sup>&euro;</sup></div>
+										</div>   
+										<div class="clear"></div>
+									</a>
+								</li>
+
+								<li>
+									<a href="">
+										<img src="img/sample-advert2.png" alt="" width="180" height="135" style="float:left;"/>
+										<div class="fleft info">
+											<h1>Didim Altınkum Kiralık Full Yazlık</h1>
+											<h2>Yenihisar-Efeler, Didim Aydın</h2>
+											<h3>2 Oda + 1 Salon Tatil Evi</h3>
+										</div>
+										<div class="fiyatbox1 sprite fright">
+											<div class="title">per night</div>
+											<div class="fiyat">53<sup>&euro;</sup></div>
+										</div>   
+										<div class="clear"></div>
+									</a>
+								</li>
+								
+							</ul>
+							
+							<div class="pagination">
+								<ul>
+									<li><a href="" class="previous sprite"></a></li>
+									<li><a href="">1</a></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><a href="" class="next sprite"></a></li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+							
+					</div>
+			
 			</div>
 			<!-- arama sağ alan bitiyor-->  
 			<div class="clear"></div>
 
+            <img src="img/serit2.png"  width="950" height="20" class="mt15 " />
 
+            <div class="main-bottom-info">
+                <img src="img/tatilevim-cok-yakinda.jpg"  width="628" height="187" alt="where to stay in safranbolu" class="fleft" style="margin-top:5px;"/>
+
+                <div class="epostaliste-mailbirak fleft">
+                    <div>
+                        <input type="text" class="mail-input">
+                            <a href="javascript:;" class="ekle-buton">EKLE</a>
+                            <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+			
 		<!-- orta alan burda bitiyor-->  
 	    </div>
 	</div>
@@ -276,6 +356,43 @@
 		$.fn.slideFadeToggle = function(speed, easing, callback) {
 			return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
 		};
+		
+		/* sol kutular sabit açılacaklar*/
+		$('#body-section1, #body-section2, #body-section4 ').click();
+		
+		
+		/* fiyataraligi slider */
+		
+		$( "#slider-range" ).slider({
+			range: true,
+			min: 0,
+			max: 1000,
+			values: [ 0, 1000 ],
+			slide: function( event, ui ) {
+				$( "#fiyataraligi" ).val( "€" + ui.values[ 0 ] + " - €" + ui.values[ 1 ] );
+			}
+		});
+		$( "#fiyataraligi" ).val( "€" + $( "#slider-range" ).slider( "values", 0 ) +
+			" - €" + $( "#slider-range" ).slider( "values", 1 ) );		
+		
+		
+		
+		 $(".defaultblur").each(function(){
+				var defaultVal = $(this).attr('title');
+				$(this).focus(function(){
+					if ($(this).val() == defaultVal){
+						$(this).removeClass('active').val('');
+					}
+				});
+				$(this).blur(function() {
+					if ($(this).val() == ''){
+						$(this).addClass('active').val(defaultVal);
+					}
+				})
+				.blur().addClass('active');
+			});
+
+	
 		
 
 	});
